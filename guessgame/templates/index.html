@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+    <h1>Welcome to the Guess the Number Game</h1>
+    
+    <form method="POST" action="{% url 'resultt' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Guess</button>
+    </form>
+    </body>
+</html>

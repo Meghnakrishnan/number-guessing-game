@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+    <h1>Guess the Number Game</h1>
+    
+    <h2>{{ result }}</h2>  <!-- Display the result message -->
+
+    <!-- Optionally, provide a link to return to the form for another guess -->
+    <a href="{% url 'index' %}">Try Again</a>
+    </body>
+</html>
