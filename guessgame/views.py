@@ -1,14 +1,6 @@
 from django.shortcuts import render,redirect
 from .forms import InputtingForm
 import random
-
-
-# Create your views here.
-# def guess(request):
-#     return render(request,'index.html')
-# def resultt(request):
-#     return render(request,'results.html')
-
 def guess(request):
     form=InputtingForm()
     return render(request,'index.html',{'form':form})
